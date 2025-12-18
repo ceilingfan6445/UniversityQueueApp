@@ -1,0 +1,36 @@
+<div style="text-align: center; font-family: sans-serif; margin-top: 50px;">
+  
+  <h1>🎓 University Office Hours Queue</h1>
+
+  <div style="border: 1px solid #ccc; padding: 20px; display: inline-block; border-radius: 10px;">
+    <h3>Join the Line</h3>
+    
+    <input type="text" placeholder="Enter Name" [(ngModel)]="studentName" style="padding: 8px; margin: 5px;">
+    <br>
+    <input type="text" placeholder="Student ID" [(ngModel)]="studentId" style="padding: 8px; margin: 5px;">
+    <br><br>
+    
+    <button (click)="joinQueue()" style="padding: 10px 20px; background-color: #007bff; color: white; border: none; cursor: pointer;">
+      Join Queue
+    </button>
+  </div>
+
+  <hr style="margin: 30px;">
+
+  <button (click)="fetchQueue()" style="padding: 8px;">🔄 Refresh List</button>
+
+  <div style="margin: 20px;">
+    <button (click)="serveStudent()" style="padding: 15px 30px; background-color: #28a745; color: white; border: none; font-size: 16px; cursor: pointer; border-radius: 5px;">
+      ✅ Call Next Student
+    </button>
+  </div>
+
+  <h3>Current Students Waiting:</h3>
+  
+  <ul style="list-style-type: none; padding: 0;">
+    <li *ngFor="let student of queueList" style="background: #f0f0f0; margin: 5px auto; width: 300px; padding: 10px; border-radius: 5px;">
+      <b>{{ student.name }}</b> (ID: {{ student.id }})
+    </li>
+  </ul>
+
+</div>
