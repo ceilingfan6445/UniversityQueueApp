@@ -1,4 +1,4 @@
-## University Office Hours Queue (Uniqueue Pro Prototype)
+## University Office Hours Queue (prototype for Uniqueue Pro)
 
 This full stack application manages a real-time waiting list for student office hours.
 
